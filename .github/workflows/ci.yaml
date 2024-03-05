@@ -33,6 +33,7 @@ jobs:
 
     - run: pnpm install --frozen-lockfile
     - run: npm test
+      continue-on-error: false
   package:
     runs-on: ubuntu-latest
     continue-on-error: false
