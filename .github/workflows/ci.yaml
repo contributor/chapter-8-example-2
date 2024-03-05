@@ -32,3 +32,11 @@ jobs:
 
     - run: pnpm install --frozen-lockfile
     - run: npm test
+  package:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo " packaging..."
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo " deploying..."
