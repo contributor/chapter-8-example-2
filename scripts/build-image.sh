@@ -15,4 +15,6 @@ set -u # or set -o nounset
 : "$CONTAINER_REGISTRY"
 : "$VERSION"
 
-docker build -t $CONTAINER_REGISTRY/video-streaming:$VERSION --file ./Dockerfile-prod .
+docker build -t $CONTAINER_REGISTRY/video-streaming:$VERSION --file ./src/video-streaming/Dockerfile-prod .
+docker build -t $CONTAINER_REGISTRY/history:$VERSION --file ./src/history/Dockerfile-prod .
+docker build -t $CONTAINER_REGISTRY/recommendations:$VERSION --file ./src/recommendations/Dockerfile-prod .

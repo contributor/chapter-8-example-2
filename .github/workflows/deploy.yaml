@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      VERSION: "3.0"
+      VERSION: "ci-3.0"
       CONTAINER_REGISTRY: ${{ secrets.CONTAINER_REGISTRY }}
       REGISTRY_UN: ${{ secrets.REGISTRY_UN }}
       REGISTRY_PW: ${{ secrets.REGISTRY_PW  }}
@@ -44,14 +44,14 @@ jobs:
       #
       # Builds the Docker image.
       #
-      # - name: Build
-      #   run: ./scripts/build-image.sh
+      - name: Build
+        run: ./scripts/build-image.sh
 
       # #
       # # Publishes the Docker image to the container registry.
       # #
-      # - name: Publish
-      #   run: ./scripts/push-image.sh
+      - name: Publish
+        run: ./scripts/push-image.sh
 
       #
       # Installs Kubectl and connects it to the cluster.
