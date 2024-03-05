@@ -20,7 +20,7 @@ const PORT = process.env.PORT;
 //
 app.get("/video", async (req, res) => { // Route for streaming video.
     
-    const videoPath = "./videos/SampleVideo_1280x720_1mb.mp4";
+    const videoPath = "./videos/SampleVideo_1280x720_1mb.mkv";
     const stats = await fs.promises.stat(videoPath);
 
     res.writeHead(200, {
