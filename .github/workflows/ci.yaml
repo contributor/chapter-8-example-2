@@ -39,12 +39,14 @@ jobs:
   package:
     runs-on: ubuntu-latest
     continue-on-error: false
+    if: success()
 
     steps:
     - run: echo " packaging..."
   deploy:
     runs-on: ubuntu-latest
     continue-on-error: false
+    if: success()
 
     steps:
     - run: echo " deploying..."
