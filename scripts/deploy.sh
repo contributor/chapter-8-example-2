@@ -21,4 +21,4 @@ envsubst < ./scripts/kubernetes/mongo-deploy.yaml | kubectl apply -f -
 envsubst < ./scripts/kubernetes/rabbit-deploy.yaml | kubectl apply -f -
 envsubst < ./scripts/kubernetes/history-deploy.yaml | kubectl apply -f -
 envsubst < ./scripts/kubernetes/recommendations-deploy.yaml | kubectl apply -f -
-envsubst < ./scripts/kubernetes/video-streamin-deploy.yaml | kubectl apply -f -
+envsubst < ./scripts/kubernetes/video-streaming-deploy.yaml | kubectl apply -f -
